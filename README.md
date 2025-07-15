@@ -35,10 +35,10 @@ AI-powered document search system that lets users upload documents, chunk and em
 
 ## ⚙️ Setup Instructions
 
-1. **Install ZUP**
+1. Install ZUP
    brew tap devglyph1/zup
    brew install zup
-2. **Configure your environment**
+2. Configure your environment
    Add your OpenAI_API_KEY to a .env file or directly in code
-3. **Quick start in local**
+3. Quick start in local
    zup run
