@@ -1,0 +1,19 @@
+setup:
+  - desc: Install Go dependencies
+    cmd: go mod tidy
+
+  - desc: Install Docker and Colima (if not already installed)
+    cmd: brew install docker colima
+
+  - desc: Start Colima (Docker runtime for macOS)
+    cmd: colima start
+
+  - desc: Run Qdrant (gRPC vector database) locally
+    cmd: docker run -p 6333:6333 -p 6334:6334 qdrant/qdrant
+    mode: background
+
+  - desc: Start the Go server
+    cmd: go run main.go
+
+  - desc: Open the frontend HTML page in your browser (macOS)
+    cmd: open frontend.html
